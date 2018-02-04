@@ -4,6 +4,7 @@ import com.example.ShadowSocksShare.service.ShadowSocksCrawlerService;
 import com.example.ShadowSocksShare.service.ShadowSocksSerivce;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Profile;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.scheduling.annotation.Async;
@@ -16,7 +17,7 @@ import java.util.Set;
  */
 @Slf4j
 @Component
-// @Profile("prod")
+@Profile("prod")
 public class ApplicationStartupListener {
 	@Autowired
 	private ShadowSocksSerivce shadowSocksSerivce;
