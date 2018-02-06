@@ -113,7 +113,7 @@ public class Free_ssServiceImpl extends ShadowSocksCrawlerService {
 		} catch (Exception e) {
 			log.error(e.getMessage(), e);
 		}
-		return new ShadowSocksEntity("https://free-ss.site", "free-ss.site", false, new Date());
+		return new ShadowSocksEntity("https://free-ss.site/", "free-ss.site", false, new Date());
 	}
 
 	/**
