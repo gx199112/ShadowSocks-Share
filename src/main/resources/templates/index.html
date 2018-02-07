@@ -130,7 +130,7 @@
                     <div class="card-body">
                         <!--<h4 class="card-title">Card title</h4>-->
                         <div class="card-text">
-                            <dl class="row">
+                            <dl class="row" th:title="${ssrd.remarks}">
                                 <dt class="col-md-3 col-sm-4">状态</dt>
                                 <dd class="col-md-9 col-sm-8">
                                     <span th:text="${(ssrd.valid ? '有效' : '无效') + '   ' + #dates.format(ssrd.validTime, 'yy/MM/dd HH:mm')}"

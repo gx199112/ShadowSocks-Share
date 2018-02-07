@@ -91,7 +91,7 @@ public class Free_ssServiceImpl extends ShadowSocksCrawlerService {
 						ss.setValid(false);
 						ss.setValidTime(new Date());
 						ss.setTitle("free-ss.site");
-						ss.setRemarks("free-ss.site");
+						ss.setRemarks("https://free-ss.site/");
 						ss.setGroup("ShadowSocks-Share");
 
 						// 测试网络
