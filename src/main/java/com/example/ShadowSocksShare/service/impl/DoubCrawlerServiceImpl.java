@@ -4,6 +4,7 @@ import com.example.ShadowSocksShare.domain.ShadowSocksDetailsEntity;
 import com.example.ShadowSocksShare.service.ShadowSocksCrawlerService;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -62,7 +63,7 @@ public class DoubCrawlerServiceImpl extends ShadowSocksCrawlerService {
 	/**
 	 * 网页内容解析 ss 信息
 	 */
-	/*@Override
+	@Override
 	protected Set<ShadowSocksDetailsEntity> parse(Document document) {
 		Elements tables = document.select("table");
 
@@ -111,10 +112,10 @@ public class DoubCrawlerServiceImpl extends ShadowSocksCrawlerService {
 			}
 		}
 		return new HashSet<>();
-	}*/
+	}
 
 	// 解析 连接方式
-	@Override
+	/*@Override
 	protected Set<ShadowSocksDetailsEntity> parse(Document document) {
 		Elements ssList = document.select("a.dl1");
 
@@ -148,7 +149,7 @@ public class DoubCrawlerServiceImpl extends ShadowSocksCrawlerService {
 			}
 		}
 		return set;
-	}
+	}*/
 
 	/**
 	 * 目标网站 URL
