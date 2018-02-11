@@ -4,6 +4,12 @@ proxy:
   host: 127.0.0.1
   port: 1080
 
+  free-ss:
+    enable: true
+    host: 113.12.72.24
+    port: 3128
+    socks: false
+
 
 # spring boot 启用调试模式
 debug:  true
