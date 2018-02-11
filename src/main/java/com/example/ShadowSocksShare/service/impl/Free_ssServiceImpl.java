@@ -44,7 +44,7 @@ public class Free_ssServiceImpl extends ShadowSocksCrawlerService {
 			// 设置代理
 			// if (proxyEnable)
 			// http://spys.one/en/http-proxy-list/
-			webClient.getOptions().setProxyConfig(new ProxyConfig("39.137.131.45", 80));
+			webClient.getOptions().setProxyConfig(new ProxyConfig("113.12.72.24", 3128));
 			// 1. 爬取账号
 			webClient.getOptions().setJavaScriptEnabled(true);                // 启动JS
 			webClient.setJavaScriptTimeout(10 * 1000);                            // 设置JS执行的超时时间
