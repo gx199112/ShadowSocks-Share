@@ -9,7 +9,6 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.google.zxing.WriterException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.web.PageableDefault;
@@ -95,19 +94,9 @@ public class MainController {
 				.body(shadowSocksSerivceImpl.createQRCodeImage(text, width, height));
 	}
 
-	@Value("${proxy.free-ss.enable}")
-	private boolean ssProxyEnable;
-	@Value("${proxy.free-ss.host}")
-	private String ssProxyHost;
-	@Value("${proxy.free-ss.port}")
-	private int ssProxyPort;
-	@Value("${proxy.free-ss.socks}")
-	private boolean ssSocks;
-
 	@RequestMapping(value = "/count")
 	@ResponseBody
 	public ResponseEntity<String> count() {
-		// return ResponseEntity.ok().body(String.valueOf(countSerivce.get()));
-		return ResponseEntity.ok().body(ssProxyEnable + ssProxyHost + ssProxyPort + ssSocks);
+		return ResponseEntity.ok().body(String.valueOf(countSerivce.get()));
 	}
 }
